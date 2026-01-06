@@ -52,7 +52,7 @@ export default function Header() {
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-violet-500 text-white">
             KM
           </span>
-          Portfolio
+          Manish Kumar
         </Link>
 
         {/* Desktop Menu */}
@@ -60,13 +60,13 @@ export default function Header() {
           <Link href="/" className="hover:text-violet-500">
             Home
           </Link>
-          <Link href="/about" className="hover:text-violet-500">
+          <Link href="#about" className="hover:text-violet-500">
             About
           </Link>
-          <Link href="/projects" className="hover:text-violet-500">
-            Portfolio
+          <Link href="#projects" className="hover:text-violet-500">
+            Projects
           </Link>
-          <Link href="/jobs" className="hover:text-violet-500">
+          <Link href="#jobs" className="hover:text-violet-500">
             Jobs
           </Link>
 

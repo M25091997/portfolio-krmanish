@@ -2,3 +2,13 @@
 
 /* Enable .dark anywhere in tree */
 @custom-variant dark (&:where(.dark, .dark *));
+
+strong {
+  @apply text-gray-900 dark:text-gray-200 font-semibold;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+

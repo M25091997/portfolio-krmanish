@@ -3,9 +3,11 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { Menu, Moon, Sun, X } from "lucide-react";
 
 export default function Header() {
   const [dark, setDark] = useState(false);
+  const [isOpenMenu, setIsOpenMenu] = useState(false);
 
   // Load theme from localStorage
   useEffect(() => {
@@ -44,11 +46,8 @@ export default function Header() {
         >
           Manish Kumar
         </Link> */}
-         {/* Logo */}
-        <Link
-          href="/"
-          className="flex items-center gap-2 text-xl font-bold"
-        >
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 text-xl font-bold">
           <span className="w-10 h-10 flex items-center justify-center rounded-full bg-violet-500 text-white">
             KM
           </span>
@@ -78,7 +77,7 @@ export default function Header() {
           </Link>
 
           {/* Theme Toggle */}
-         <ThemeToggle />
+          <ThemeToggle />
         </div>
 
         {/* Mobile Toggle */}
@@ -87,7 +86,7 @@ export default function Header() {
             onClick={toggleTheme}
             className="px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-700"
           >
-            {dark ? "🌙" : "☀️"}
+            {dark ? <Moon size={24} /> : <Sun size={24}/>}
           </button>
 
           <Link
@@ -96,8 +95,40 @@ export default function Header() {
           >
             Contact
           </Link>
+
+          <button onClick={() => setIsOpenMenu(!isOpenMenu)}>
+            {isOpenMenu ? <X size={28} /> : <Menu size={28} />}
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isOpenMenu && (
+        <div className="md:hidden bg-white dark:bg-gray-900 border-t">
+          <div className="flex flex-col gap-4 px-6 py-4">
+            <Link href="/" onClick={() => setIsOpenMenu(false)}>
+              Home
+            </Link>
+            <Link href="#about" onClick={() => setIsOpenMenu(false)}>
+              About
+            </Link>
+            <Link href="#projects" onClick={() => setIsOpenMenu(false)}>
+              Projects
+            </Link>
+            <Link href="#jobs" onClick={() => setIsOpenMenu(false)}>
+              Jobs
+            </Link>
+
+            <Link
+              href="/contact"
+              onClick={() => setIsOpenMenu(false)}
+              className="px-4 py-2 rounded-lg bg-violet-500 text-white text-center"
+            >
+              Contact
+            </Link>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

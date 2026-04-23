@@ -3,6 +3,7 @@ import Image from "next/image";
 import ProfileImage from "./ProfileImage";
 import SkillsGrid from "./SkillsGrid";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import Portfolio from "./ProjectCard";
 
 export default function HeroSection() {
   return (
@@ -253,9 +254,12 @@ export default function HeroSection() {
             </p>
           </div>
 
+          <Portfolio/>
+
           <div className="grid md:grid-cols-3 gap-8">
+
             {/* Project Card */}
-            <div className="bg-[#F6EBFE] dark:bg-slate-900 rounded-xl shadow-lg p-6 hover:-translate-y-1 transition">
+            {/* <div className="bg-[#F6EBFE] dark:bg-slate-900 rounded-xl shadow-lg p-6 hover:-translate-y-1 transition">
               <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
                 Multi Vendor E-Commerce
               </h3>
@@ -289,7 +293,7 @@ export default function HeroSection() {
                   View Project →
                 </a>
               </div>
-            </div>
+            </div> */}
 
             {/* Duplicate cards as needed */}
           </div>

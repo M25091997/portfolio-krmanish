@@ -77,8 +77,8 @@ const projects = [
     Implemented dashboards, reporting, notifications, and payment integrations with high concurrency optimization.`,
     role: "Backend Developer • System Architecture & API Development",
     tech: ["Laravel", "MySQL"],
-    link: "#",
-    status: "Completed",
+    link: "https://shivbrom.in",
+    status: "Process",
   },
 
 {
@@ -123,8 +123,8 @@ const projects = [
     "Improved database performance and query efficiency"
   ],
 
-  link: "#",
-  status: "Completed",
+  link: "https://ridocabs.com",
+  status: "Live",
 },
 
   {
@@ -147,7 +147,7 @@ const projects = [
     Implemented tracking modules, booking system, and delivery workflow management.`,
     role: "Backend Developer • API & System Development",
     tech: ["Laravel", "MySQL", "Firebase"],
-    link: "#",
+    link: "https://iflyparcel.com",
     status: "Completed",
   },
 
@@ -158,7 +158,7 @@ const projects = [
     Improved operational efficiency through digital workflow automation.`,
     role: "Backend Developer • System Development",
     tech: ["Laravel", "MySQL"],
-    link: "#",
+    link: "https://jharkhandlaproscopy.com",
     status: "Completed",
   },
 
@@ -221,7 +221,7 @@ const projects = [
     "Category-Based Product Management"
   ],
 
-  link: "#",
+  link: "https://olofind.com",
   status: "Completed",
 },
 {
@@ -262,7 +262,7 @@ const projects = [
       "Admin panel control",
       "Payment integration"
     ],
-    "link": "#",
+    "link": "https://robinat.com",
     "status": "Completed"
   },
   {
@@ -278,7 +278,7 @@ const projects = [
       "Order processing",
       "Admin & franchise dashboard"
     ],
-    "link": "#",
+    "link": "https://newlashpiri.devweaves.com",
     "status": "Completed"
   },
   {
@@ -294,7 +294,7 @@ const projects = [
       "Role & permission management",
       "Admin panel & booking control"
     ],
-    "link": "#",
+    "link": "https://funbook.devweaves.com",
     "status": "Completed"
   },
   {
@@ -312,7 +312,7 @@ const projects = [
     "Payment integration",
     "Booking status tracking"
   ],
-  "link": "#",
+  "link": "https://hotelstarlotus.tripledotss.com",
   "status": "Completed"
 },
 {
@@ -332,6 +332,42 @@ const projects = [
   ],
   "link": "https://savaskincare.com/",
   "status": "Live"
+},
+{
+  "name": "Indian Cultura",
+  "category": "International E-Commerce Platform",
+  "description": "Worked on an international e-commerce platform delivering products globally with multi-currency support (INR & USD). Enhanced system functionality, fixed critical bugs, and improved UI/UX. Integrated secure payment gateways (Stripe & PayPal), shipping APIs (Shiprocket), and WhatsApp API for real-time order notifications and customer communication.",
+  "role": "Full Stack Developer • Maintenance, Integrations & Payment Systems",
+  "tech": ["Laravel", "MySQL", "JavaScript", "Stripe", "PayPal", "Shiprocket API", "WhatsApp API"],
+  "features": [
+    "International product delivery",
+    "Multi-currency support (INR & USD)",
+    "Payment gateway integration (Stripe, PayPal)",
+    "Shipping API integration (Shiprocket)",
+    "WhatsApp order notifications",
+    "UI/UX improvements",
+    "Bug fixing & performance optimization"
+  ],
+  "link": "https://indiancultura.com/",
+  "status": "Live"
+},
+{
+  "name": "Devshree Events",
+  "category": "Event Management & Booking Platform",
+  "description": "Developed a full-stack inquiry-based event management platform for organizing destination events, holidays, and functions. Users can explore services, request bookings, select menus, and hire artists for events. Built a dynamic inquiry system to manage leads, bookings, and customer interactions efficiently.",
+  "role": "Full Stack Developer • Inquiry System & Booking Management",
+  "tech": ["Laravel", "MySQL", "JavaScript"],
+  "features": [
+    "Event & function booking system",
+    "Destination event & holiday planning",
+    "Menu selection for events",
+    "Artist booking & management",
+    "Inquiry-based lead management system",
+    "Admin panel for managing bookings & users",
+    "Customer interaction & follow-up system"
+  ],
+  "link": "https://devshree.co.in/",
+  "status": "Live"
 }
 ];
 export default function Portfolio() {
@@ -349,7 +385,7 @@ export default function Portfolio() {
         </div> */}
 
         {/* Cards */}
-        <div className="grid md:grid-cols-3 gap-8">
+        {/* <div className="grid md:grid-cols-3 gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={index}
@@ -359,27 +395,27 @@ export default function Portfolio() {
               viewport={{ once: true }}
               className="bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all p-6"
             >
-              {/* Project Name (Main Title) */}
+              {/* Project Name (Main Title) /}
               <h3 className="text-xl font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
                 {project.name}
               </h3>
 
-              {/* Subtitle */}
+              {/* Subtitle /}
               <p className="text-md text-gray-500 dark:text-gray-400 mt-1 font-bold">
                 {project.category}
               </p>
 
-              {/* Role */}
+              {/* Role /}
               {/* <p className="mt-2 text-xs text-gray-500 dark:text-gray-400">
                <span className="font-bold">Role</span>  : {project.role}
               </p> */}
 
-              {/* Description */}
+              {/* Description /}
               <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
                 {project.description}
               </p>
 
-              {/* Tech */}
+              {/* Tech /}
               <div className="mt-4 flex flex-wrap gap-2">
                 {project.tech.map((tech, i) => (
                   <span
@@ -391,7 +427,7 @@ export default function Portfolio() {
                 ))}
               </div>
 
-              {/* Button */}
+              {/* Button /}
               <div className="mt-5">
                 <a
                   href={project.link}
@@ -404,7 +440,91 @@ export default function Portfolio() {
               </div>
             </motion.div>
           ))}
+        </div> */}
+
+
+        <div className="grid md:grid-cols-3 gap-8">
+  {projects.map((project, index) => (
+    <motion.div
+      key={index}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.4, delay: index * 0.15 }}
+      viewport={{ once: true }}
+      className="group bg-white dark:bg-slate-800 rounded-xl shadow-md hover:shadow-xl hover:-translate-y-1 transition-all p-6 flex flex-col justify-between"
+    >
+      <div>
+        {/* Title */}
+        <h3 className="text-lg font-bold bg-gradient-to-r from-violet-600 to-purple-600 bg-clip-text text-transparent">
+          {project.name}
+        </h3>
+
+        {/* Category */}
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+          {project.category}
+        </p>
+
+        {/* Role */}
+        <p className="mt-2 text-xs text-gray-600 dark:text-gray-400">
+          <span className="font-semibold text-gray-700 dark:text-gray-300">
+            Role:
+          </span>{" "}
+          {project.role}
+        </p>
+
+        {/* Description */}
+        <p className="mt-3 text-gray-600 dark:text-gray-300 text-sm leading-relaxed">
+          {project.description}
+        </p>
+
+        {/* Features (limit to 3 for clean UI) */}
+        {project.features && (
+          <ul className="mt-3 text-xs text-gray-500 dark:text-gray-400 list-disc pl-4 space-y-1">
+            {project.features.slice(0, 3).map((item, i) => (
+              <li key={i}>{item}</li>
+            ))}
+          </ul>
+        )}
+
+        {/* Tech */}
+        <div className="mt-4 flex flex-wrap gap-2">
+          {project.tech.map((tech, i) => (
+            <span
+              key={i}
+              className="text-xs bg-violet-100 dark:bg-violet-500/20 text-violet-700 dark:text-violet-300 px-2 py-1 rounded"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
+      </div>
+
+      {/* Footer */}
+      <div className="mt-5 flex items-center justify-between">
+        {/* Status */}
+        <span
+          className={`text-xs font-medium px-2 py-1 rounded ${
+            project.status === "Live"
+              ? "bg-green-100 text-green-600"
+              : "bg-gray-200 text-gray-600 dark:bg-gray-700 dark:text-gray-300"
+          }`}
+        >
+          {project.status}
+        </span>
+
+        {/* Button */}
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm font-medium text-violet-600 hover:text-violet-700 transition"
+        >
+          Explore →
+        </a>
+      </div>
+    </motion.div>
+  ))}
+</div>
       </div>
     </section>
   );

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import ProfileImage from "./ProfileImage";
 import SkillsGrid from "./SkillsGrid";
+import IntroSection from "./IntroSection";
 import { FaLinkedinIn, FaGithub } from "react-icons/fa";
 import Portfolio from "./ProjectCard";
 
@@ -11,7 +12,8 @@ export default function HeroSection() {
       <section className="bg-gradient-to-r from-violet-50 to-purple-300 dark:from-slate-900 dark:to-slate-950">
         <div className="max-w-7xl mx-auto px-6 py-24 grid md:grid-cols-2 gap-12 items-center">
           <div>
-            <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+            <IntroSection/>
+            {/* <h1 className="text-4xl md:text-6xl font-bold leading-tight">
               Hello, I’m <br />
               <span className="text-violet-500">Manish Kumar</span>
             </h1>
@@ -30,7 +32,7 @@ export default function HeroSection() {
               I specialize in Laravel, React, Next.js, Node.js, and MySQL, with
               strong expertise in backend systems, REST APIs, cloud
               integrations, and modern user interfaces.
-            </p>
+            </p> */}
 
             {/* CTA Buttons */}
             <div className="mt-8 flex flex-col sm:flex-row gap-4">
